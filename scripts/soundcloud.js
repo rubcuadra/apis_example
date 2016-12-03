@@ -112,6 +112,21 @@ $.ajax({
 				}
 		    }
 	  	});
+
+var data = {"requester": "70e9debf-c746-4373-b143-8452796a2ff1",'items':itemsToORder}
+
+$.ajax({
+			    	url: '/api/v1/products/',
+			    	headers: {'X-CSRFToken': getCookie('csrftoken'),'Content-Type':'application/json'},
+				    method: 'POST',
+				    contentType: 'application/json; charset=UTF-8',
+			    	dataType: 'json',
+				    data: JSON.stringify({data}),
+				    success: function(data)
+				    	{
+				    		console.log(data);
+					    }
+				  	});
 */
 
 
